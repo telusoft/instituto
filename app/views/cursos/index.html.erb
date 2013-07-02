@@ -1,0 +1,23 @@
+<h1>Mostrando todos los cursos</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cursos.each do |curso| %>
+  <tr>
+    <td><%= curso.nombre %></td>
+    <td><%= link_to 'Mostrar', curso %></td>
+    <td><%= link_to 'Editar', edit_curso_path(curso) %></td>
+    <td><%= link_to 'Borrar', curso, confirm: 'Estas seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Curso', new_curso_path %>

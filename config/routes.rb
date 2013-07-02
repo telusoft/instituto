@@ -1,4 +1,10 @@
 Instituto::Application.routes.draw do
+  resources :cursos
+
+  resources :profesors
+
+  resources :alumnos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
